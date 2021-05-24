@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Melody Studio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='MusicPlayerStyles.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top pt-0 pb-0">
+           
+            <div class="container-fluid">
+           
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav-brandlogo">
+                    <a class="navbar-brand" href="#"><img src="../logo.png" alt="Logo" height="60px" weidht="60px" resizable></a>
+                </nav>
+                
+                <div class="collapse navbar-collapse" id="collapse_target">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 col">
+                  
+                    <li class="nav-item col-1" id="list-logo-heading">
+                      <a class="nav-link active" aria-current="page" href="#"><div id="logo-heading"><h5>Melody</h5><h6>Studio</h6></div></a>
+                    </li>
+                  
+                    <li class="nav-item col-3" id="list-fav">
+                      <a class="nav-link" href="#">Favourites</a>
+                    </li>
+                  
+                    <li class="col-4" id="list-search">
+                        <form class="d-flex">
+                            <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </li>
+                  
+                    <li class="col-1" id="list-notification">
+                        <a class="nav-link" href="#"><i class="fas fa-bell fa-2x"></i></a> 
+                    </li>
+                  
+                    <li class="col-2" id="list-user">
+                        <a class="nav-link" href="#"><img src="../user-img.jfif" alt="User" id="user-image"></a>
+                    </li>
+                </ul>
+                </div>
+              </div>
+          </nav>
+    </header>
+      
+
+    <div class="container-fluid pt-2">
+        <div class="info-container">
+            <section class="trending-albums ">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- Image 1 -->
+                      <div class="carousel-item active">
+                        <img src="../Faraar.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Faraar</h4>
+                          <p>Top 50 by Melody Studio - hindi audio</p>
+                        </div>
+                      </div>
+                      <!-- Image 2 -->
+                      <div class="carousel-item">
+                        <img src="../BigHitsPunjabi.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Big Hits Punjabi</h4>
+                          <p>Burrahhh trending 50 - Punjabi Hits</p>
+                        </div>
+                      </div>
+                      <!-- Image 3 -->
+                      <div class="carousel-item">
+                        <img src="../RepeatMode.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Repeat Mode</h4>
+                          <p>To give you energetic workout sessions - Repeat 50</p>
+                        </div>
+                      </div>
+                      <!-- Image 4 -->
+                      <div class="carousel-item">
+                        <img id ="carousel-image-size" src="../LoveDanceHits.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Repeat Mode</h4>
+                          <p>Light up your day with trending 50</p>
+                        </div>
+                      </div>
+                      <!-- Image 5 -->
+                      <div class="carousel-item">
+                        <img id ="carousel-image-size" src="../GoldenOldies.jpg" class="d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h4>Repeat Mode</h4>
+                          <p>Golden Oldies by Melody Studio </p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+            </section>
+            
+            <h4 class="section-heading">Latest Release</h4>
+            <section class="latest-container">
+                
+                <div class="latest-items">
+                    <div><a href="#" alt="Kaagaz"><img src="../Kaagaz.jpg"></a></div>
+                    <div class="latest-items-info-container">
+                        <div class="container1">
+                            <h4>Kaagaz</h4>
+                            <p>Jan 1, 2021</p>
+                        </div>
+                        <div class="container2">
+                            <span><a href="#"><i class="fas fa-chevron-circle-down"></i></a></span>
+                            <span><p>04:00</p></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="latest-items">
+                    <div><a href="#" alt="Kaagaz"><img src="../Kaagaz.jpg"></a></div>
+                    <div class="latest-items-info-container">
+                        <div class="container1">
+                            <h4>Kaagaz</h4>
+                            <p>Jan 1, 2021</p>
+                        </div>
+                        <div class="container2">
+                            <span><a href="#"><i class="fas fa-chevron-circle-down"></i></a></span>
+                            <span><p>04:00</p></span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="latest-items">
+                    <div><a href="#" alt="Kaagaz"><img src="../Kaagaz.jpg"></a></div>
+                    <div class="latest-items-info-container">
+                        <div class="container1">
+                            <h4>Kaagaz</h4>
+                            <p>Jan 1, 2021</p>
+                        </div>
+                        <div class="container2">
+                            <span><a href="#"><i class="fas fa-chevron-circle-down"></i></a></span>
+                            <span><p>04:00</p></span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="latest-items">
+                    <div><a href="#" alt="Kaagaz"><img src="../Kaagaz.jpg"></a></div>
+                    <div class="latest-items-info-container">
+                        <div class="container1">
+                            <h4>Kaagaz</h4>
+                            <p>Jan 1, 2021</p>
+                        </div>
+                        <div class="container2">
+                            <span><a href="#"><i class="fas fa-chevron-circle-down"></i></a></span>
+                            <span><p>04:00</p></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <h4 class="section-heading">Popular Artist</h4>
+            <section class="popular-container">
+               <div class="popular-items">
+                    <span><a href="#"><img src="../Shankar Mahadevan.jpg" alt="Shankar Mahadevan"></a></span><span><h6 class="popular-names">Shankar Mahadevan</h6></span>
+               </div>
+               <div class="popular-items">
+                    <Span><a href="#"><img src="../Lata Mangeshkar.jpg" alt="Lata Mangeshkar"></a></Span><span><h6 class="popular-names">Lata Mangeshkar</h6></span>
+               </div>
+               <div class="popular-items">
+                    <span><a href="#"><img src="../Jubin Nautiyal.jpg" alt="Jubin Nautiyal"></a></Span><span><h6 class="popular-names">Jubin Nautiyal</h6></span>
+               </div>
+               <div class="popular-items">
+                    <Span><a href="#"><img src="../Asha Bhosle.jpg" alt="Asha Bhosle"></a></Span><span><h6 class="popular-names">Asha Bhosle</h6></span>
+               </div>
+               <div class="popular-items">
+                    <span><a href="#"><img src="../Ammy Virk.jpg" alt="Ammy Virk"></a></Span><span><h6 class="popular-names">Ammy Virk</h6></span>
+               </div>
+               <div class="popular-items">
+                    <span><a href="#"><img src="../B Praak.jpg" alt="B Praak"></a></Span><span><h6 class="popular-names">B Praak</h6></span>
+               </div> 
+            </section>
+            <section class="stations">
+                <div id="station-logo" >
+                    <img src="../station-logo.PNG" alt="Stations">
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../Love.jpg" alt="Stations"><h6 class="station-names">Love<h6></a>
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../Retro.jpg" alt="Stations"><h6 class="station-names">Retro</h6></a>
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../chill.jpg" alt="Stations"><h6 class="station-names">Chill</h6></a>
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../Workout.jpg" alt="Stations"><h6 class="station-names">Workout</h6></a>
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../Rock.jpg" alt="Stations"><h6 class="station-names">Rock</h6></a>
+                </div>
+                <div class="station-items">
+                    <a href="#"><img src="../Pop.jpg" alt="Stations"><h6 class="station-names">Pop</h6></a>
+                </div>
+            </section>
+            <section class="occasion">
+                <div class="occasion-image-container">
+                    <a href="#"><img src="../Party.jpg"><h6 class="occasion-names">Party</h6></a>
+                </div>
+                <div class="occasion-image-container">
+                    <a href="#"><img src="../Electronic.jpg"><h6 class="occasion-names">Electronic</h6></a>
+                </div>
+                <div class="occasion-image-container">
+                    <a href="#"><img src="../Roadtrip.jpg"><h6 class="occasion-names">Roadtrip</h6></a>
+                </div>
+            </section>
+
+            <h4 class="section-heading">Latest Hindi</h4>
+            <section class="latest-hindi-container">
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../The Power.jpg" alt="The Power"></a></span><span><h6 class="latest-hindi-items-names">The Power</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../Kaagaz.jpg" alt="Kaagaz"></a></span><span><h6 class="latest-hindi-items-names">Kaagaz</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../Vande Matram.jpg" alt="Vande Matram"></a></span><span><h6 class="latest-hindi-items-names">Vande Matram</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../Mehandi Vale Hath.jpg" alt="Mehandi Vale Hath"></a></span><span><h6 class="latest-hindi-items-names">Mehandi Vale Hath</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../Vardaan.jpg" alt="Vardaan"></a></span><span><h6 class="latest-hindi-items-names">Vardaan</h6><p>Jan 1, 2021</p></span>
+                </div>
+                <div class="latest-hindi-items">
+                    <span><a href="#"><img src="../Nachunga Aise.jpg" alt="Nachunga Aise"></a></span><span><h6 class="latest-hindi-items-names">Nachunga Aise</h6><p>Jan 1,  2021</p></span>
+                </div>
+            </section>
+
+            <h4 class="section-heading">Latest English</h4>
+            <section class="latest-english-container">
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../New Love.jpg" alt="New Love"></a></span><span><h6 class="latest-english-items-names">New Love</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../Nobody Is Listening.jpg" alt="Nobody Is Listening"></a></span><span><h6 class="latest-english-items-names">Nobody Is Listening</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../De Una Vez.jpg" alt="De Una Vez"></a></span><span><h6 class="latest-english-items-names">De Una Vez</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../Cassanova.jpg" alt="Cassanova"></a></span><span><h6 class="latest-english-items-names">Cassanova</h6><p>Jan 1,  2021</p></span>
+                </div>
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../Do Me Right.jpg" alt="Do Me Right"></a></span><span><h6 class="latest-english-items-names">Do Me Right</h6><p>Jan 1, 2021</p></span>
+                </div>
+                <div class="latest-english-items">
+                    <span><a href="#"><img src="../Fantasy.jpg" alt="Fantasy"></a></span><span><h6 class="latest-english-items-names">Fantasy</h6><p>Jan 1,  2021</p></span>
+                </div>
+            </section>    
+        </div>
+
+        <aside class="queue">
+            <div id="queue-heading"><h4>Queue</h4><div><a href="#"><i class="fas fa-chevron-circle-down"></i></a></div></div>
+    
+            <!-- 1 -->
+            <div class="queue-content" style="margin-top: 4em;">
+                <div class="queue-image"><img src="../SawanMeLagGyiAaag.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Sawan Me Lag Gyi Aag - Ginny Weds Sunny</h6>
+                    <p>Mika Singh, Payal Dev</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 2 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Cassanova.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Casanova</h6>
+                    <p>Avitest Shrivastava</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 3 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Kaagaz.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Bailgadi</h6>
+                    <p>Udit Narayan, Alka Yagnik</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 4 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Mehandi Vale Hath.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Mehandi Vaale Hath</h6>
+                    <p>Guru Randhhawa</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 5 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Vardaan.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Yalgaar</h6>
+                    <p>Yash Nagar Wily Frenzy</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 6 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Nachunga Aise.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Nachunga Aise</h6>
+                    <p>Milind Gaba</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 7 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Memories.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Memories</h6>
+                    <p>Maroon 5</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 8 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../MelodyBox.jpeg"></div>
+                <div class="queue-song-info">
+                    <h6>Stories</h6>
+                    <p>MelodyBox - Originals</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 9 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../The Power.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>Oh Saiyaan</h6>
+                    <p>Arijit Singh, Raj Pandit</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            <!-- 10 -->
+            <div class="queue-content">
+                <div class="queue-image"><img src="../Nobody Is Listening.jpg"></div>
+                <div class="queue-song-info">
+                    <h6>When Love's Around</h6>
+                    <p>Zyan Malik</p>
+                </div>
+                <div class="add-favourite"><a hef="#"><i class="fas fa-heart"></i></a>></div>
+            </div>
+            
+        </aside>
+    </div>
+
+    <div class="container-fluid bg-dark fixed-bottom">
+        <div class="media-control">
+            <div class="media-image">
+                <img src="../MelodyBox.jpeg" alt="">
+            </div>
+            <div class="media-song-info">
+                <h6>When Love's Around</h6>
+                <p>Zyan Malik</p>
+            </div>
+            <div class="media-time-button-container">
+                <div class="media-range">
+                    <input type="range" min="1" max="100" value="50" id="time-slider">
+                </div>
+                <div class="media-buttons">
+                    <div class="button"><a href="#"><i class="fas fa-random"></i></a></div>
+                    <div class="button"><a href="#"><i class="fas fa-step-backward"></i></a></div>
+                    <div class="button"><a href="#"><i class="fas fa-play"></i></a></div>
+                    <div class="button"><a href="#"><i class="fas fa-step-forward"></i></a></div>
+                    <div class="button"><a href="#"><i class="fas fa-redo-alt"></i></div>
+                </div>                
+            </div>
+            <div class="volume-bar">
+                <div id="volume-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="media-volume">
+                    <input type="range" min="1" max="10" value="50" id="volume-slider">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
